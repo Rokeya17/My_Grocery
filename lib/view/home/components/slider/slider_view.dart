@@ -1,11 +1,9 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:my_grocery/model/banner.dart';
-import 'package:my_grocery/view/home/components/slider/banner_card.dart';
 
 class CarouselSliderView extends StatefulWidget {
-  final List<AdBanner> bannerList;
+  final List<Banner> bannerList;
   const CarouselSliderView({Key? key, required this.bannerList})
       : super(key: key);
 
