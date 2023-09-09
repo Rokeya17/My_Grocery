@@ -1,15 +1,21 @@
 import 'package:flutter/material.dart';
 
-import '../../component/main_header.dart';
-
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-        child: Column(
-      children: [MainHeader()],
-    ));
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('App Screen'),
+        centerTitle: true,
+      ),
+      body: const Center(
+        child: Text(
+          'Welcome to Grocery app',
+          style: TextStyle(fontSize: 25),
+        ),
+      ),
+    );
   }
 }

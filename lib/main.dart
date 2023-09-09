@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:my_grocery/route/app_page.dart';
-import 'package:my_grocery/route/app_route.dart';
-import 'package:my_grocery/theme/app_theme.dart';
+import 'package:my_grocery/introduction_screen.dart';
+import 'package:my_grocery/view/home/home_screen.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-void main() {
+bool show = true;
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  final prefs = await SharedPreferences.getInstance();
+  show = prefs.getBool('ON_BOARDING') ?? true;
   runApp(const MyApp());
 }
 
@@ -13,12 +16,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-      getPages: AppPage.list,
-      initialRoute: AppRoute.dashboard,
-      debugShowCheckedModeBanner: false,
-      theme: AppTheme.lightTheme,
-      themeMode: ThemeMode.light,
+    return MaterialApp(
+      title: 'Flutter On Boarding',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: show ? IntroScreen() : const HomeScreen(),
     );
   }
 }
