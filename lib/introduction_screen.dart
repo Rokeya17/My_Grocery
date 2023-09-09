@@ -9,50 +9,41 @@ class IntroScreen extends StatelessWidget {
   final List<PageViewModel> pages = [
     PageViewModel(
       title: 'Welcome to My Grocery Application',
-
+      body: '',
       image: Center(
-        child: Image.asset('assets/images/img_1.png'),
+        child: Image.asset('assets/images/L1.png'),
       ),
-      // Add a background color here
-      decoration: PageDecoration(
-        pageColor: Colors.black, // Set the background color
-      ),
-      // Other properties...
     ),
     PageViewModel(
-      title: 'Get First Delivery Service ',
+      title: 'Get First Delivery Service',
       body: 'Body 2',
       image: Center(
         child: Image.asset('assets/images/img_2.png'),
       ),
-      // Other properties...
     ),
     PageViewModel(
-      title: ('Best Quality Grocery Door to Door'),
-      body: 'Body 3',
+      title: 'Best Quality Grocery',
+      body: 'Door to Door',
       image: Center(
         child: Image.asset('assets/images/img_3.png'),
       ),
-      // Other properties...
     ),
     // Add more PageViewModels as needed...
   ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Grocery'),
-        centerTitle: true,
-      ),
+      backgroundColor: Colors.white, // Set the background color here
       body: Padding(
         padding: const EdgeInsets.fromLTRB(12, 80, 12, 12),
         child: IntroductionScreen(
           pages: pages,
           dotsDecorator: const DotsDecorator(
             size: Size(15, 15),
-            color: Colors.blue,
+            color: Colors.black54,
             activeSize: Size.square(20),
-            activeColor: Colors.red,
+            activeColor: Colors.blueGrey,
           ),
           showDoneButton: true,
           done: const Text(
@@ -76,6 +67,6 @@ class IntroScreen extends StatelessWidget {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setBool('ON_BOARDING', false);
     Navigator.pushReplacement(
-        context, MaterialPageRoute(builder: (context) => const HomeScreen()));
+        context, MaterialPageRoute(builder: (context) => HomeScreen()));
   }
 }
