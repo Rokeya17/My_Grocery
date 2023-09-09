@@ -8,80 +8,21 @@ class IntroScreen extends StatelessWidget {
 
   final List<PageViewModel> pages = [
     PageViewModel(
-        title: 'hi',
-        body: 'hi',
-        footer: SizedBox(
-          height: 45,
-          width: 300,
-          child: ElevatedButton(
-            style: ElevatedButton.styleFrom(
-                primary: Colors.green,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20)),
-                elevation: 8),
-            onPressed: () {},
-            child: const Text("Let's Go", style: TextStyle(fontSize: 20)),
-          ),
-        ),
-        image: Center(
-          child: Image.asset('assets/images/L1.jpg'),
-        ),
-        decoration: const PageDecoration(
-            titleTextStyle: TextStyle(
-          fontSize: 25.0,
-          fontWeight: FontWeight.bold,
-        ))),
+      title: 'Title 1', // Provide a title as a string
+      body: 'Body 1',
+      // Other properties...
+    ),
     PageViewModel(
-        title: 'Hello!',
-        body: 'hi',
-        footer: SizedBox(
-          height: 45,
-          width: 300,
-          child: ElevatedButton(
-            style: ElevatedButton.styleFrom(
-                // primary: Colors.red,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20)),
-                elevation: 8),
-            onPressed: () {},
-            child: const Text(
-              "Let's go",
-              style: TextStyle(fontSize: 20),
-            ),
-          ),
-        ),
-        image: Center(
-          child: Image.asset("assets/images/L1.jpg"),
-        ),
-        decoration: const PageDecoration(
-            titleTextStyle: TextStyle(
-          fontSize: 25.0,
-          fontWeight: FontWeight.bold,
-        ))),
+      title: 'Title 2', // Provide a title as a string
+      body: 'Body 2',
+      // Other properties...
+    ),
     PageViewModel(
-        title: 'Hey',
-        body: 'Hey',
-        footer: SizedBox(
-          height: 45,
-          width: 300,
-          child: ElevatedButton(
-            style: ElevatedButton.styleFrom(
-                primary: Colors.red,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20)),
-                elevation: 8),
-            onPressed: () {},
-            child: const Text("Let's Start", style: TextStyle(fontSize: 20)),
-          ),
-        ),
-        image: Center(
-          child: Image.asset('assets/images/L1.jpg'),
-        ),
-        decoration: const PageDecoration(
-            titleTextStyle: TextStyle(
-          fontSize: 25.0,
-          fontWeight: FontWeight.bold,
-        ))),
+      titleWidget: Text('Custom Title 3'), // Provide a custom title widget
+      body: 'Body 3',
+      // Other properties...
+    ),
+    // Add more PageViewModels as needed...
   ];
 
   @override
@@ -111,11 +52,8 @@ class IntroScreen extends StatelessWidget {
             'Skip',
             style: TextStyle(fontSize: 20),
           ),
-          showNextButton: true,
-          next: const Icon(
-            Icons.arrow_forward,
-            size: 25,
-          ),
+          // Set showNextButton to false to remove the "Next" arrow button.
+          showNextButton: false,
           onDone: () => onDone(context),
           curve: Curves.bounceOut,
         ),
