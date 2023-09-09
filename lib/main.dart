@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:my_grocery/home_screen.dart';
 import 'package:my_grocery/introduction_screen.dart';
-import 'package:my_grocery/view/home/home_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 bool show = true;
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter On Boarding',
+      title: 'My Grocery',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),

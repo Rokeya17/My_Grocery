@@ -12,7 +12,7 @@ class HomeScreen extends StatelessWidget {
       ),
       body: const Center(
         child: Text(
-          'Welcome to Grocery app',
+          'App Screen',
           style: TextStyle(fontSize: 25),
         ),
       ),

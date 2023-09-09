@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
-import 'package:my_grocery/view/home/home_screen.dart';
+import 'package:my_grocery/home_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class IntroScreen extends StatelessWidget {
@@ -8,13 +8,14 @@ class IntroScreen extends StatelessWidget {
 
   final List<PageViewModel> pages = [
     PageViewModel(
-        title: 'Welcome to My Grocery Application',
+        title: 'hi',
+        body: 'hi',
         footer: SizedBox(
           height: 45,
           width: 300,
           child: ElevatedButton(
             style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.green,
+                primary: Colors.green,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20)),
                 elevation: 8),
@@ -23,7 +24,7 @@ class IntroScreen extends StatelessWidget {
           ),
         ),
         image: Center(
-          child: Image.asset('assets/images/L1.png'),
+          child: Image.asset('assets/images/L1.jpg'),
         ),
         decoration: const PageDecoration(
             titleTextStyle: TextStyle(
@@ -31,7 +32,8 @@ class IntroScreen extends StatelessWidget {
           fontWeight: FontWeight.bold,
         ))),
     PageViewModel(
-        title: 'Get First Delivery Service',
+        title: 'Hello!',
+        body: 'hi',
         footer: SizedBox(
           height: 45,
           width: 300,
@@ -43,13 +45,13 @@ class IntroScreen extends StatelessWidget {
                 elevation: 8),
             onPressed: () {},
             child: const Text(
-              "Why to wait!",
+              "Let's go",
               style: TextStyle(fontSize: 20),
             ),
           ),
         ),
         image: Center(
-          child: Image.asset('assets/images/L1.png'),
+          child: Image.asset("assets/images/L1.jpg"),
         ),
         decoration: const PageDecoration(
             titleTextStyle: TextStyle(
@@ -57,13 +59,14 @@ class IntroScreen extends StatelessWidget {
           fontWeight: FontWeight.bold,
         ))),
     PageViewModel(
-        title: 'Here We Start!',
+        title: 'Hey',
+        body: 'Hey',
         footer: SizedBox(
           height: 45,
           width: 300,
           child: ElevatedButton(
             style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.red,
+                primary: Colors.red,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20)),
                 elevation: 8),
@@ -72,7 +75,7 @@ class IntroScreen extends StatelessWidget {
           ),
         ),
         image: Center(
-          child: Image.asset('assets/3.png'),
+          child: Image.asset('assets/images/L1.jpg'),
         ),
         decoration: const PageDecoration(
             titleTextStyle: TextStyle(
@@ -85,7 +88,7 @@ class IntroScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Flutter on Boarding UI'),
+        title: const Text('UI'),
         centerTitle: true,
       ),
       body: Padding(
