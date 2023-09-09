@@ -33,12 +33,12 @@ class SplashScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset(
-              'assets/logo.png', // Replace with the path to your app's logo.
+              'assets/img.png', // Replace with the path to your app's logo.
               width: 150.0,
             ),
             SizedBox(height: 16.0),
             Text(
-              'Your App Name',
+              'My Grocery',
               style: TextStyle(
                 fontSize: 24.0,
                 color: Colors.white,

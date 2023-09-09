@@ -8,28 +8,40 @@ class IntroScreen extends StatelessWidget {
 
   final List<PageViewModel> pages = [
     PageViewModel(
-      title: 'Title 1', // Provide a title as a string
-      body: 'Body 1',
+      title: 'Welcome to My Grocery Application',
+
+      image: Center(
+        child: Image.asset('assets/images/img_1.png'),
+      ),
+      // Add a background color here
+      decoration: PageDecoration(
+        pageColor: Colors.black, // Set the background color
+      ),
       // Other properties...
     ),
     PageViewModel(
-      title: 'Title 2', // Provide a title as a string
+      title: 'Get First Delivery Service ',
       body: 'Body 2',
+      image: Center(
+        child: Image.asset('assets/images/img_2.png'),
+      ),
       // Other properties...
     ),
     PageViewModel(
-      titleWidget: Text('Custom Title 3'), // Provide a custom title widget
+      title: ('Best Quality Grocery Door to Door'),
       body: 'Body 3',
+      image: Center(
+        child: Image.asset('assets/images/img_3.png'),
+      ),
       // Other properties...
     ),
     // Add more PageViewModels as needed...
   ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('UI'),
+        title: const Text('Grocery'),
         centerTitle: true,
       ),
       body: Padding(
@@ -52,7 +64,6 @@ class IntroScreen extends StatelessWidget {
             'Skip',
             style: TextStyle(fontSize: 20),
           ),
-          // Set showNextButton to false to remove the "Next" arrow button.
           showNextButton: false,
           onDone: () => onDone(context),
           curve: Curves.bounceOut,
