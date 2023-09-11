@@ -14,9 +14,9 @@ class MyApp extends StatelessWidget {
       title: 'My Grocery App',
       home: Scaffold(
         appBar: AppBar(
-          title: Text('My Grocery App'),
+          title: const Text('My Grocery App'),
         ),
-        body: Center(
+        body: const Center(
             // Your app content here
             ),
       ),

@@ -11,12 +11,12 @@ class IntroScreen extends StatelessWidget {
       title: 'Welcome to My Grocery Application',
       body: '',
       image: Center(
-        child: Image.asset('assets/images/L1.png'),
+        child: Image.asset('assets/images/L1.jpg'),
       ),
     ),
     PageViewModel(
       title: 'Get First Delivery Service',
-      body: 'Body 2',
+      body: '',
       image: Center(
         child: Image.asset('assets/images/img_2.png'),
       ),

@@ -17,7 +17,12 @@ class GroceryApp extends StatelessWidget {
   }
 }
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
+  @override
+  _HomeScreenState createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
   final List<GroceryItem> groceryItems = [
     GroceryItem(
       name: 'Apples',
@@ -37,6 +42,8 @@ class HomeScreen extends StatelessWidget {
     // Add more grocery items here
   ];
 
+  int _currentIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,6 +56,29 @@ class HomeScreen extends StatelessWidget {
           final item = groceryItems[index];
           return GroceryItemCard(item: item);
         },
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _currentIndex,
+        onTap: (index) {
+          setState(() {
+            _currentIndex = index;
+            // You can add logic to navigate to different sections/screens here
+          });
+        },
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.shopping_cart),
+            label: 'Cart',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'Profile',
+          ),
+        ],
       ),
     );
   }
