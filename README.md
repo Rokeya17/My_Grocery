@@ -1,6 +1,7 @@
 # my_grocery
 
-A new Flutter project.
+A new Flutter project Grocery app
+.
 
 ## Getting Started
 
